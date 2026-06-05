@@ -1,17 +1,17 @@
 
 ---
-import '../styles.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import FavoriteIdol from '../components/FavoriteIdol.astro';
+import PhotoWall from '../components/PhotoWall.astro';
+import Timeline from '../components/Timeline.astro';
+const heroImg = '/images/hero.jpg';
 ---
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>离郁落星P</title>
-</head>
-<body>
-<main>
-<h1>离郁落星P</h1>
-<p>Astro 6 + Tailwind 4 + Cloudflare Pages</p>
-</main>
-</body>
-</html>
+<BaseLayout>
+  <Hero title="离郁落星P" subtitle="福丸小糸 × Noctchill" img={heroImg} />
+  <About />
+  <FavoriteIdol />
+  <PhotoWall />
+  <Timeline />
+</BaseLayout>

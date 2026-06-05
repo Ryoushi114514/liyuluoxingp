@@ -3,3 +3,20 @@ backend:
   name: test-repo
 media_folder: public/images
 public_folder: /images
+collections:
+  - name: timeline
+    label: Timeline
+    folder: src/content/timeline
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: Date, name: date, widget: datetime}
+      - {label: Event, name: event, widget: string}
+  - name: gallery
+    label: Gallery
+    folder: src/content/gallery
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
