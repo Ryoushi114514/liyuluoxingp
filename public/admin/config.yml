@@ -1,0 +1,5 @@
+
+backend:
+  name: test-repo
+media_folder: public/images
+public_folder: /images
